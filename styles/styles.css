@@ -581,24 +581,62 @@ fieldset {
   margin-right: 0;
 }
 
-.hotels-list-item-info {
-  display: grid;
-  grid-template-columns: 140px 140px;
-  margin: 0;
-  padding: 0;
-  gap: 16px 20px;
-}
-
 .hotels-list-item-title {
+  margin: 16px 0 16px 0;
   text-transform: none;
 }
 
-.hotels-filter-item-rating {
+.hotels-list-item-info {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 21px 36px 37px;
+  row-gap: 16px;
+  column-gap: 16px;
+  grid-template-areas:
+    "description price"
+    "button-main button-favorite"
+    "stars rating";
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-items: start;
+}
+
+.hotels-list-item-description {
+  grid-area: description;
+}
+
+.hotels-list-item-price {
+  grid-area: price;
+  justify-self: end;
+}
+
+.button.button-main {
+  grid-area: button-main;
+}
+
+.hotels-list-item-button {
+  grid-area: button-favorite;
+  justify-self: end;
+}
+
+.hotels-list-item-stars {
+  grid-area: stars;
+}
+
+.hotels-list-item-rating {
+  grid-area: rating;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
   text-transform: uppercase;
-  color: #333333;
   font-size: 16px;
   line-height: 20px;
-  background-color: #f2f2f2;
+  border-radius: 4px;
+  width: 140px;
+  height: 37px;
 }
 
 .hotels-filter-buttons {
