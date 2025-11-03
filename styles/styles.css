@@ -615,9 +615,19 @@ fieldset {
   grid-area: button-main;
 }
 
+.hotels-list-item-link {
+  width: 140px;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hotels-list-item-button {
   grid-area: button-favorite;
   justify-self: end;
+  width: 140px;
+  padding: 8px 0;
 }
 
 .hotels-list-item-stars {
