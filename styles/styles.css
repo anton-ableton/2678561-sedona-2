@@ -92,6 +92,12 @@ select {
   background-repeat: no-repeat;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* classes */
 
 .visually-hidden {
@@ -595,6 +601,7 @@ select {
 }
 
 .hotels-filter-range {
+  appearance: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
